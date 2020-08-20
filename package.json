@@ -2,7 +2,16 @@
   "name": "curupira-grid-system",
   "version": "0.1.0",
   "private": false,
-
+  "description": "a grid and others css utilit framework",
+  "homepage": "https://curupiratecnologia.github.io/grid-system/",
+  "keywords":["css","grid","grid-system"],
+  "license" : "SEE LICENSE IN LICENSE",
+  "author": {"name":"Leandro Celes", "email":"leandroceles@gmail.com","url":"https://curupiratecnologia.com.br"},
+  "main":"dist/css/main.css",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/curupiratecnologia/grid-system.git"
+  },
   "scripts": {
     "dev": "gulp",
     "serve": "gulp",
