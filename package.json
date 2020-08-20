@@ -1,5 +1,5 @@
 {
-  "name": "curupira-grid-system",
+  "name": "@curupira/grid-system",
   "version": "0.1.0",
   "private": false,
   "description": "a grid and others css utilit framework",
