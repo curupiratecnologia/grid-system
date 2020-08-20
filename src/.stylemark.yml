@@ -14,7 +14,7 @@ theme:
 
 examples:
     css:
-        - ../dist/main.css
+        - dist/main.css
 
 
 order:
