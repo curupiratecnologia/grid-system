@@ -96,7 +96,7 @@ gulp.task('copy-stylus', function() {
 
 
 gulp.task("default", gulp.series("stylus","stylemark","browser","watch") );
-gulp.task("build", gulp.series("stylusFinal","stylemark","copy-stylus") );
+gulp.task("build", gulp.series("stylusFinal","copy-stylus","stylemark") );
 
 
 
