@@ -1,0 +1,23 @@
+name: Guia de Estilo
+
+assets:
+    - src/docs
+    - src/assets
+
+theme:    
+    css:
+        - src/theme.css
+        
+    sidebar:
+        background: "#f9fafc"
+        textColor: "#8492a6"
+
+examples:
+    css:
+        - src/css/main.css
+
+
+order:
+    - +Design
+    - +Utils
+    - -Relatorios

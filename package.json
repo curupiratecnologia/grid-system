@@ -1,0 +1,33 @@
+{
+  "name": "curupira-grid-system",
+  "version": "0.1.0",
+  "private": false,
+  
+  "scripts": {
+    "dev": "gulp",
+    "serve": "gulp",
+    "build-doc": "stylemark -i src -o dist -c src/.stylemark.yml",
+    "build": "gulp build"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "dotenv": "^8.2.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-uglify": "^2.0.0",
+    "stylemark": "^3.1.7"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "colorette": "^1.2.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-run": "^1.7.1",
+    "gulp-stylus": "^2.7.0",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2"
+  }
+}
