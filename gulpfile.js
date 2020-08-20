@@ -61,7 +61,7 @@ gulp.task('stylusFinal', function () {
                 cascade: false
                }))
                .pipe(cleanCSS())
-               .pipe(gulp.dest('src/css/'));
+               .pipe(gulp.dest('dist/css/'));
 });
 
 

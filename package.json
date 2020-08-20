@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gulp",
     "serve": "gulp",
-    "build-doc": "stylemark -i src -o dist -c src/.stylemark.yml",
+    "build-doc": "stylemark -i src -o docs -c src/.stylemark.yml",
     "build": "gulp build"
   },
   "dependencies": {
