@@ -2,7 +2,7 @@
   "name": "curupira-grid-system",
   "version": "0.1.0",
   "private": false,
-  
+
   "scripts": {
     "dev": "gulp",
     "serve": "gulp",

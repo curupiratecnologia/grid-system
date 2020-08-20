@@ -1,0 +1,1094 @@
+<!doctype html>
+<html lang="en-us" id="insta">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link href="_stylemark/css/all.css" rel="stylesheet">
+		<link rel="icon" href="" type="image/x-icon">
+
+		<!-- @todo Replace with custom icomoon/fontello bundle -->
+		<script src="https://use.fontawesome.com/6dd56ad32d.js"></script>
+
+		<title>Guia de Estilo</title>
+
+			<link rel="stylesheet" href="src/theme.css">
+	</head>
+	<body class="overflow-x-off i-page theme-page">
+		<div class="i-page__content theme-content">
+
+			<div class="i-nav-select theme-mobile-nav">
+				<form class="form">
+					<select class="form-control form-control-lg theme-mobile-nav-select">
+						<option disabled selected>Go to…</option>
+							<optgroup label="Design">
+									<option value="grid">Grid</option>
+									<option value="typography">Typography</option>
+							</optgroup>
+							<optgroup label="Utils">
+									<option value="utilitys">Utilitys</option>
+							</optgroup>
+					</select>
+				</form>
+			</div>
+
+				<div id="category-design" class="theme-content-category">
+						<div id="grid" class="i-library theme-content-element">
+	<h1 class="display-4 theme-content-element-title">Grid</h1>
+	<span class="theme-content-element-source">
+		<span class="theme-content-element-source-label">Source:</span>
+		<span class="theme-content-element-source-path">docs/grid_system.md</span>
+	</span>
+	<div class="theme-content-element-description"><p>v 0.1</p>
+<h4>Responsividade</h4><p>A responsividade tem os seguintes breakpoints</p>
+<ul>
+<li><code>xs  : only screen and (max-width: 576px)&quot;</code></li>
+<li><code>sm  : &quot;only screen and (min-width: 576.98px) and (max-width: 768px)</code></li>
+<li><code>md : only screen and (min-width: 768px.98px) and (max-width: 992px)</code></li>
+<li><code>lg : only screen and (min-width: 992px) and (max-width: 1440px)</code></li>
+<li><code>xlg : &quot;only screen and (min-width: 1440.98px)</code></li>
+<li><code>print : &quot;only print</code> - utiliado somente em impressao</li>
+</ul>
+<p><em>todas as classes que definen tamanho podem ter responsividade aplicada utilizando <code>-xs</code> <code>-sm</code> etc</em></p>
+<h4>Container</h4><p> o container somente determina a largura maxima <code>.container</code> conforme os breakspoints para cada tamanho de tela</p>
+<ul>
+<li><code>.container</code> - max de 1280 px</li>
+<li><code>.container-fluid</code> - 100%</li>
+</ul>
+<h3>Grids</h3><p><strong>grid container</strong> - podemos ter grid de uma ou varias colunas, utilizando </p>
+<ul>
+<li><code>.grid .grid-num</code> - num = numero de colunas, de 1 a 24. exemplo <code>.grid-12</code></li>
+<li><code>.grid .grid-num-expandable</code> - permite que items do grid maior que sua coluna aumente o tamanho da coluna</li>
+<li><code>.grid .grid-auto-num</code> - cria automaticamente colunas, com num defininto o tamanho minimo da coluna, de 10 a 2400px exemplo <code>.grid-auto-200</code></li>
+</ul>
+<p><strong>grid items</strong> - são os items dentro do grid, que podem ocupar uma ou mais coluna e ou linhas, utilizando as classes</p>
+<ul>
+<li><code>.col-num</code> - num = o numero de colunas que o elemento ocupa (1-24)</li>
+<li><code>.row-num</code> - num = o numero de linhas que o elemento ocupa (1-24)</li>
+</ul>
+<p><strong>espacamento</strong> - podemos definir os espacos/gaps entre os elementos do grid:</p>
+<ul>
+<li><code>.gap-num</code> - num = espaco entre as celuas da grid, de 0 a 12 (espaco final multiplos de 4)</li>
+<li><code>.col-gap-num</code> - num = espaco entre as colunas, de 0 a 12 (espaco final multiplos de 4)</li>
+<li><code>.row-gap-num</code> - num = espaco entre as linhas, de 0 a 12 (espaco final multiplos de 4)</li>
+</ul>
+<p><strong>responsividade</strong> - grids containers, elementos e espacamentos podem ser utilizados para diferentes tamanho de tela, aplicando <code>-sm</code> ou <code>-md</code> etc antes dos num.
+Exemplos:</p>
+<ul>
+<li><code>.grid .grid-1 .grid-md-3 .grid-lg-4</code> - em mobile vai ter 1 coluna, em md (768px) vai ter 3, e adiante 4 colunas</li>
+<li><code>.grid .grid-6 .grid-xs-3</code> - grid vai ter 6 colunas, em mobile vai ter 3</li>
+<li><code>.col-1 col-sm-2</code> - um elemente do grid ocupa 1 coluna, e 2 colunas acima de sm(576)</li>
+<li><code>.row-2 row-sm-2</code> - um elemente do grid ocupa 2 linhas, e 3 linhas acima de md(768px) </li>
+<li><code>.gap-10 .gap-xs-2</code> - os elementos vao ter uma espacamento normal 40px, em mobile vai ter de 8 pixel</li>
+</ul>
+<div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="grid-gridexample.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="grid-gridexample.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="    &lt;div class=&#39;container-fluid&#39;&gt;
+    &lt;h5&gt; grid de 4 colunas md, 2 coluna small, 1 coluna mobile &lt;/h5&gt;
+    &lt;div class=&#39;grid grid-1 grid-sm-2 grid-md-4 &#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+        &lt;div &gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div &gt; 8 &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;h5&gt; grid com numero de colunas automatizados, se definindo o tamanho minimo sempre &lt;/h5&gt;
+    &lt;div class=&#39;grid grid-auto-100 gap-2 gap-md-5&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+        &lt;div &gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div &gt; 8 &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;h5&gt; grid com o item 5 ocupando 4 colunas normal, 2 em small, e 1 em mobile &lt;/h5&gt;
+    &lt;div class=&#39;grid grid-4&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div class=&quot;col-1 col-sm-2 col-md-4&quot; &gt; 5 (span) &lt;/div&gt;
+        &lt;div &gt; 6  &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt; 
+        &lt;div &gt; 8 &lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;h5&gt; grid responsiva, o um item `col-num` maior que o numero da grid vai ser ignorado 
+    &lt;/h5&gt;
+
+    &lt;div class=&#39;grid grid-2 grid-sm-2 grid-lg-6&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div class=&quot;col-lg-6&quot; &gt; 5 (span) &lt;/div&gt;
+        &lt;div &gt; 6  &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt; 
+        &lt;div &gt; 8 &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h5&gt; grid definindo espacamento entre os itens responsivo &lt;/h5&gt;
+    &lt;div class=&#39;grid grid-4 gap-1 gap-md-10&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+        &lt;div&gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div&gt; 8 &lt;/div&gt;
+        &lt;div&gt; 9 &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h5&gt; grid definindo tamanho de linhas que um elemento oculpa, responsivo (4 row grande, 2row small) &lt;/h5&gt;
+    &lt;div class=&#39;grid grid-4 gap-1&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div class=&#39;row-2 row-md-4&#39;&gt; 4 (row 2) &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+        &lt;div&gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div&gt; 8 &lt;/div&gt;
+        &lt;div&gt; 9 &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;">Copy</button>
+		<pre class="mb-0"><code class="lang-">    &lt;div class=&#39;container-fluid&#39;&gt;
+    &lt;h5&gt; grid de 4 colunas md, 2 coluna small, 1 coluna mobile &lt;/h5&gt;
+    &lt;div class=&#39;grid grid-1 grid-sm-2 grid-md-4 &#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+        &lt;div &gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div &gt; 8 &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;h5&gt; grid com numero de colunas automatizados, se definindo o tamanho minimo sempre &lt;/h5&gt;
+    &lt;div class=&#39;grid grid-auto-100 gap-2 gap-md-5&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+        &lt;div &gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div &gt; 8 &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;h5&gt; grid com o item 5 ocupando 4 colunas normal, 2 em small, e 1 em mobile &lt;/h5&gt;
+    &lt;div class=&#39;grid grid-4&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div class=&quot;col-1 col-sm-2 col-md-4&quot; &gt; 5 (span) &lt;/div&gt;
+        &lt;div &gt; 6  &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt; 
+        &lt;div &gt; 8 &lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;h5&gt; grid responsiva, o um item `col-num` maior que o numero da grid vai ser ignorado 
+    &lt;/h5&gt;
+
+    &lt;div class=&#39;grid grid-2 grid-sm-2 grid-lg-6&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div class=&quot;col-lg-6&quot; &gt; 5 (span) &lt;/div&gt;
+        &lt;div &gt; 6  &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt; 
+        &lt;div &gt; 8 &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h5&gt; grid definindo espacamento entre os itens responsivo &lt;/h5&gt;
+    &lt;div class=&#39;grid grid-4 gap-1 gap-md-10&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+        &lt;div&gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div&gt; 8 &lt;/div&gt;
+        &lt;div&gt; 9 &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h5&gt; grid definindo tamanho de linhas que um elemento oculpa, responsivo (4 row grande, 2row small) &lt;/h5&gt;
+    &lt;div class=&#39;grid grid-4 gap-1&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div class=&#39;row-2 row-md-4&#39;&gt; 4 (row 2) &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+        &lt;div&gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div&gt; 8 &lt;/div&gt;
+        &lt;div&gt; 9 &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+	</div>
+</div>
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> css</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="    h5{
+        margin-top:5em;
+    }
+    .grid &gt; div{
+        background: gray;
+        padding:20px;
+    }">Copy</button>
+		<pre class="mb-0"><code class="lang-">    h5{
+        margin-top:5em;
+    }
+    .grid &gt; div{
+        background: gray;
+        padding:20px;
+    }</code></pre>
+	</div>
+</div><h4>Alinhamento do Grid</h4><p><strong>Justify/Align tanto definido no grid container como em algum elemento do grid</strong></p>
+<ul>
+<li><code>.j-start</code> - justify</li>
+<li><code>.j-center</code></li>
+<li><code>.j-end</code></li>
+<li><code>.j-stretch</code></li>
+<li><code>.a-start</code> - align</li>
+<li><code>.a-center</code></li>
+<li><code>.a-end</code></li>
+<li><code>.a-stretch</code></li>
+</ul>
+<p><strong>responsividade</strong> pode ser utilizado aplicando <code>-md</code> etc antes da centralizacao</p>
+<ul>
+<li><code>.j-start .j-md-center</code> - ate 760px justifica no inicio, depois justifica no centro no centro</li>
+</ul>
+<div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="grid-gridexamplea.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="grid-gridexamplea.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="    &lt;div class=&#39;container-fluid&#39;&gt;
+    &lt;h5&gt; jutify-align aplicado aos itens, com o item 2 mudando conforme o tamanho da tela &lt;/h5&gt;
+    &lt;div class=&#39;grid grid-4&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div class=&quot;col-3 j-center j-md-end&quot;&gt; 2 &lt;/div&gt;
+        &lt;div class=&quot;col-2 j-end&quot;&gt; 5 &lt;/div&gt;
+        &lt;div class=&quot;col-2&quot;&gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div class=&quot;j-end&quot;&gt; 8 &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;h5&gt; alinhamentos aplicado ao grid container, com o elemento 4 utilizando alinhamento responsivo &lt;/h5&gt;
+    &lt;div class=&#39;grid grid-4 gap-1 j-center a-center&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div class=&#39;row-3 a-lg-end&#39;&gt; 4 &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+        &lt;div&gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div&gt; 8 &lt;/div&gt;
+        &lt;div&gt; 9 &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;">Copy</button>
+		<pre class="mb-0"><code class="lang-">    &lt;div class=&#39;container-fluid&#39;&gt;
+    &lt;h5&gt; jutify-align aplicado aos itens, com o item 2 mudando conforme o tamanho da tela &lt;/h5&gt;
+    &lt;div class=&#39;grid grid-4&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div class=&quot;col-3 j-center j-md-end&quot;&gt; 2 &lt;/div&gt;
+        &lt;div class=&quot;col-2 j-end&quot;&gt; 5 &lt;/div&gt;
+        &lt;div class=&quot;col-2&quot;&gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div class=&quot;j-end&quot;&gt; 8 &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;h5&gt; alinhamentos aplicado ao grid container, com o elemento 4 utilizando alinhamento responsivo &lt;/h5&gt;
+    &lt;div class=&#39;grid grid-4 gap-1 j-center a-center&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div class=&#39;row-3 a-lg-end&#39;&gt; 4 &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+        &lt;div&gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div&gt; 8 &lt;/div&gt;
+        &lt;div&gt; 9 &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;</code></pre>
+	</div>
+</div>
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> css</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="   h5{
+        margin-top:5em;
+    }
+    .grid div{
+        background: gray;
+        padding:20px;
+    }">Copy</button>
+		<pre class="mb-0"><code class="lang-">   h5{
+        margin-top:5em;
+    }
+    .grid div{
+        background: gray;
+        padding:20px;
+    }</code></pre>
+	</div>
+</div><h3>Elements in Rows or Cols using Flex</h3><p>podemos ter uma linha ou colunas usando o flex, com responsividade podendo ser determinada</p>
+<ul>
+<li><code>.in-cols (.in-cols-sm)</code> - todos os elementos vao aparecer como colunas, uma do lado da outra</li>
+<li><code>.in-rows (.in-rows-sm)</code> - todos os elementos filhos vao aparecer de linha em linha</li>
+<li><code>.gap-2</code> - o espacamento(margim) entre os elementos </li>
+<li><code>.inline (.inline-sm)</code> - o container se comporta como inline-flex</li>
+<li><code>.wrap (.wrap-sm)</code> - o container se comporta como inline-flex</li>
+<li><code>.nowrap, .(nowrap-sm)</code> - o container se comporta como inline-flex</li>
+</ul>
+<p><strong>itens size</strong></p>
+<ul>
+<li><code>.grow-num (.grow-sm-num)</code> - num de 1 a 5</li>
+<li><code>.shrink-num (.shrink-sm-num)</code> - num de 1 a 5</li>
+<li><code>.w-num (.w-sm-num)</code> - determina a largura/flexbasis, num de 0 a 100, de 10 em 10</li>
+<li><code>.h-num (.h-sm-num)</code> - mesma coisa que w, para quando usamos o .in-rows</li>
+</ul>
+<p><strong>order</strong></p>
+<ul>
+<li><code>.order-1, (.order-sm-1)</code> ordem, de 1 a 24</li>
+<li><code>.order--1 (.order-sm--1)</code> de -1 a -24</li>
+</ul>
+<p><strong>Justify/Align Flex container and itens with with</strong></p>
+<ul>
+<li><code>.j-start (.j-sm-start)</code> - justify-content</li>
+<li><code>.j-center</code></li>
+<li><code>.j-end</code></li>
+<li><code>.j-stretch</code></li>
+<li><code>.j-space-between</code></li>
+<li><code>.j-space-around</code></li>
+<li><code>.j-space-evenly</code></li>
+<li><code>.j-stretch</code></li>
+<li><code>.a-start</code> - align-itens</li>
+<li><code>.a-center</code></li>
+<li><code>.a-end</code></li>
+<li><code>.a-stretch</code></li>
+<li><code>.a-baseline</code></li>
+<li><code>.ac-start</code> - align-content</li>
+<li><code>.ac-center</code></li>
+<li><code>.ac-end</code></li>
+<li><code>.ac-stretch</code></li>
+<li><code>.ac-baseline</code></li>
+</ul>
+<p>exemplos: </p>
+<div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="grid-flexexample.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="grid-flexexample.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="    &lt;div class=&#39;container-fluid&#39;&gt;
+    &lt;h5&gt; itens em colunas &lt;/h5&gt;
+
+    &lt;div class=&#39;in-cols gap-2&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div class=&quot;grow-1&quot;&gt; 5 &lt;/div&gt;
+        &lt;div class=&quot;grow-1&quot;&gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div class=&quot;col-3&quot;&gt; 8 &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;h5&gt; items em linhas &lt;/h5&gt;
+    &lt;div class=&#39;in-rows gap-4&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div class=&quot;a-center&quot;&gt; no centro &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+        &lt;div&gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div class=&quot;a-end&quot;&gt; 8 no final &lt;/div&gt;
+        &lt;div  class=&quot;order--1&quot;&gt; 9 que vira 1 &lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;h5&gt; items in colunas e em linha no mobile &lt;/h5&gt;
+    &lt;div class=&#39;in-rows-xs in-cols-sm gap-4&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;       
+        &lt;div&gt; 3 &lt;/div&gt;       
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;/div&gt;">Copy</button>
+		<pre class="mb-0"><code class="lang-">    &lt;div class=&#39;container-fluid&#39;&gt;
+    &lt;h5&gt; itens em colunas &lt;/h5&gt;
+
+    &lt;div class=&#39;in-cols gap-2&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div class=&quot;grow-1&quot;&gt; 5 &lt;/div&gt;
+        &lt;div class=&quot;grow-1&quot;&gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div class=&quot;col-3&quot;&gt; 8 &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;h5&gt; items em linhas &lt;/h5&gt;
+    &lt;div class=&#39;in-rows gap-4&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;
+        &lt;div class=&quot;a-center&quot;&gt; no centro &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+        &lt;div&gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div class=&quot;a-end&quot;&gt; 8 no final &lt;/div&gt;
+        &lt;div  class=&quot;order--1&quot;&gt; 9 que vira 1 &lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;h5&gt; items in colunas e em linha no mobile &lt;/h5&gt;
+    &lt;div class=&#39;in-rows-xs in-cols-sm gap-4&#39;&gt;
+        &lt;div&gt; 1 &lt;/div&gt;
+        &lt;div&gt; 2 &lt;/div&gt;       
+        &lt;div&gt; 3 &lt;/div&gt;       
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;/div&gt;</code></pre>
+	</div>
+</div>
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> css</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="    div &gt; div &gt; div{
+        background: gray;
+        padding:20px;
+    }">Copy</button>
+		<pre class="mb-0"><code class="lang-">    div &gt; div &gt; div{
+        background: gray;
+        padding:20px;
+    }</code></pre>
+	</div>
+</div></div>
+</div>
+
+						<div id="typography" class="i-library theme-content-element">
+	<h1 class="display-4 theme-content-element-title">Typography</h1>
+	<span class="theme-content-element-source">
+		<span class="theme-content-element-source-label">Source:</span>
+		<span class="theme-content-element-source-path">docs/typography_system.md</span>
+	</span>
+	<div class="theme-content-element-description"><h3>Text Sizes</h3><p> os tamanhos das fontes são tanto determinados como classe, ou como css variaveis</p>
+<p> tamanho como css var</p>
+<ul>
+<li><p><code>.titulo{ font-size: var(--fs-md) }</code></p>
+<p>tamanho como classes</p>
+</li>
+<li><p><code>.fs-xs</code> - 0.67em;</p>
+</li>
+<li><code>.fs-sm</code> -  0.75em;</li>
+<li><code>.fs-md</code> - 1em</li>
+<li><code>.fs-lg</code> -  1.333em; </li>
+<li><code>.fs-xlg</code> - 1.777em;</li>
+<li><code>.fs-xxlg</code> - 2.369em;</li>
+<li><code>.fs-xxxlg</code> -  3.157em;</li>
+<li><code>.fs-xxxxlg</code> - 4.209em;</li>
+</ul>
+<div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="typography-typesize.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="typography-typesize.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="
+&lt;div class=&quot;mt-2 fs-xs&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+&lt;div class=&quot;mt-2 fs-sm&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+&lt;div class=&quot;mt-2 fs-md&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+&lt;div class=&quot;mt-2 fs-lg&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+&lt;div class=&quot;mt-2 fs-xlg&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+&lt;div class=&quot;mt-2 fs-xxlg&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+&lt;div class=&quot;mt-2 fs-xxxlg&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+&lt;div class=&quot;mt-2 fs-xxxxlg&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+">Copy</button>
+		<pre class="mb-0"><code class="lang-">
+&lt;div class=&quot;mt-2 fs-xs&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+&lt;div class=&quot;mt-2 fs-sm&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+&lt;div class=&quot;mt-2 fs-md&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+&lt;div class=&quot;mt-2 fs-lg&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+&lt;div class=&quot;mt-2 fs-xlg&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+&lt;div class=&quot;mt-2 fs-xxlg&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+&lt;div class=&quot;mt-2 fs-xxxlg&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+&lt;div class=&quot;mt-2 fs-xxxxlg&quot;&gt; This is a Title with Font Size&lt;/div&gt;
+</code></pre>
+	</div>
+</div><h4>Others typefaces definition</h4><div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="typography-othertypefaces.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="typography-othertypefaces.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="    &lt;code&gt; `.text` &lt;/code&gt;
+    &lt;div class=&quot;text&quot;&gt; a normal text &lt;/div&gt;
+
+    &lt;code&gt; .title-tables &lt;/code&gt;
+    &lt;div class=&quot;title-tables&quot;&gt; Tabela Title &lt;/div&gt;
+
+    &lt;code&gt; ..big-number__label &lt;/code&gt;
+    &lt;div class=&quot;big-number__label&quot;&gt; big number labels &lt;/div&gt;
+    &lt;code&gt; .big-number__number &lt;/code&gt;
+    &lt;div class=&quot;big-number__number&quot;&gt; 123 &lt;/div&gt;
+
+    &lt;code&gt; .big-number__number--md &lt;/code&gt;
+    &lt;div class=&quot;big-number__number--md&quot;&gt; 123 &lt;/div&gt;
+">Copy</button>
+		<pre class="mb-0"><code class="lang-">    &lt;code&gt; `.text` &lt;/code&gt;
+    &lt;div class=&quot;text&quot;&gt; a normal text &lt;/div&gt;
+
+    &lt;code&gt; .title-tables &lt;/code&gt;
+    &lt;div class=&quot;title-tables&quot;&gt; Tabela Title &lt;/div&gt;
+
+    &lt;code&gt; ..big-number__label &lt;/code&gt;
+    &lt;div class=&quot;big-number__label&quot;&gt; big number labels &lt;/div&gt;
+    &lt;code&gt; .big-number__number &lt;/code&gt;
+    &lt;div class=&quot;big-number__number&quot;&gt; 123 &lt;/div&gt;
+
+    &lt;code&gt; .big-number__number--md &lt;/code&gt;
+    &lt;div class=&quot;big-number__number--md&quot;&gt; 123 &lt;/div&gt;
+</code></pre>
+	</div>
+</div><!-- 
+
+#### Sections Title
+
+existe uma classe especial, a `.title` que pode ser usada em toda estrutura
+
+
+<div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="typography-sectiontitle.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="typography-sectiontitle.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+```sectiontitle.html
+
+<div class='container px-4'>
+
+  <h6> Title Normal </h6>
+
+  <div class='title'>
+        <h2 class='title__text'> Section title 
+          <div class='title__info'> INFO SOBRE TITULO </div>
+        </h2>
+        <div class="title__action"> 
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path d="M19.084 17.5195L15.832 14.2676C16.2656 13.5527 16.4824 12.7852 16.4824 11.9648C16.4824 10.9219 16.1631 9.99609 15.5244 9.1875C14.8857 8.37891 14.0742 7.8457 13.0898 7.58789V3C14.5664 3.1875 15.9053 3.69727 17.1064 4.5293C18.3076 5.36133 19.2568 6.43066 19.9541 7.7373C20.6514 9.04395 21 10.4531 21 11.9648C21 14.0273 20.3613 15.8789 19.084 17.5195ZM7.60547 10.8223H3C3.25781 8.7832 4.11621 7.03418 5.5752 5.5752C7.03418 4.11621 8.7832 3.25781 10.8223 3V7.58789C10.0371 7.79883 9.35449 8.19434 8.77441 8.77441C8.19434 9.35449 7.80469 10.0371 7.60547 10.8223ZM7.58789 13.0898C7.8457 14.0742 8.37891 14.8857 9.1875 15.5244C9.99609 16.1631 10.9219 16.4824 11.9648 16.4824C12.7852 16.4824 13.5527 16.2656 14.2676 15.832L17.5195 19.084C15.8789 20.3613 14.0273 21 11.9648 21C10.4531 21 9.04395 20.6514 7.7373 19.9541C6.43066 19.2568 5.36133 18.3076 4.5293 17.1064C3.69727 15.9053 3.1875 14.5664 3 13.0898H7.58789Z" fill="black"/>
+            </svg>
+
+        </div>
+   </div>
+
+
+
+  <h6> Section Title  - simple </h6>
+
+  <div class='section__title'>
+        <h2 class='title__text'> Section title </h2>
+         <div class="title__action"> 
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path d="M19.084 17.5195L15.832 14.2676C16.2656 13.5527 16.4824 12.7852 16.4824 11.9648C16.4824 10.9219 16.1631 9.99609 15.5244 9.1875C14.8857 8.37891 14.0742 7.8457 13.0898 7.58789V3C14.5664 3.1875 15.9053 3.69727 17.1064 4.5293C18.3076 5.36133 19.2568 6.43066 19.9541 7.7373C20.6514 9.04395 21 10.4531 21 11.9648C21 14.0273 20.3613 15.8789 19.084 17.5195ZM7.60547 10.8223H3C3.25781 8.7832 4.11621 7.03418 5.5752 5.5752C7.03418 4.11621 8.7832 3.25781 10.8223 3V7.58789C10.0371 7.79883 9.35449 8.19434 8.77441 8.77441C8.19434 9.35449 7.80469 10.0371 7.60547 10.8223ZM7.58789 13.0898C7.8457 14.0742 8.37891 14.8857 9.1875 15.5244C9.99609 16.1631 10.9219 16.4824 11.9648 16.4824C12.7852 16.4824 13.5527 16.2656 14.2676 15.832L17.5195 19.084C15.8789 20.3613 14.0273 21 11.9648 21C10.4531 21 9.04395 20.6514 7.7373 19.9541C6.43066 19.2568 5.36133 18.3076 4.5293 17.1064C3.69727 15.9053 3.1875 14.5664 3 13.0898H7.58789Z" fill="black"/>
+            </svg>
+
+        </div>
+   </div>
+
+  <h6> Section Title com subinfo e action </h6>
+
+  <div class='section__title'>
+        <h2 class='title__text'> Section title 
+          <div class='title__info'> INFO SOBRE TITULO </div>
+        </h2>
+        <div class="title__action"> 
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path d="M19.084 17.5195L15.832 14.2676C16.2656 13.5527 16.4824 12.7852 16.4824 11.9648C16.4824 10.9219 16.1631 9.99609 15.5244 9.1875C14.8857 8.37891 14.0742 7.8457 13.0898 7.58789V3C14.5664 3.1875 15.9053 3.69727 17.1064 4.5293C18.3076 5.36133 19.2568 6.43066 19.9541 7.7373C20.6514 9.04395 21 10.4531 21 11.9648C21 14.0273 20.3613 15.8789 19.084 17.5195ZM7.60547 10.8223H3C3.25781 8.7832 4.11621 7.03418 5.5752 5.5752C7.03418 4.11621 8.7832 3.25781 10.8223 3V7.58789C10.0371 7.79883 9.35449 8.19434 8.77441 8.77441C8.19434 9.35449 7.80469 10.0371 7.60547 10.8223ZM7.58789 13.0898C7.8457 14.0742 8.37891 14.8857 9.1875 15.5244C9.99609 16.1631 10.9219 16.4824 11.9648 16.4824C12.7852 16.4824 13.5527 16.2656 14.2676 15.832L17.5195 19.084C15.8789 20.3613 14.0273 21 11.9648 21C10.4531 21 9.04395 20.6514 7.7373 19.9541C6.43066 19.2568 5.36133 18.3076 4.5293 17.1064C3.69727 15.9053 3.1875 14.5664 3 13.0898H7.58789Z" fill="black"/>
+            </svg>
+
+        </div>
+   </div>
+
+
+  <h6> section title com subinfo e box lateral</h6>
+
+  <div class='section__title'>
+        <div class="section__title__box"></div>
+        <h2 class='title__text'> Section title 
+            <div class='title__info'> INFO SOBRE TITULO </div>
+        </h2>
+
+         <div class="title__action"> 
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path d="M19.084 17.5195L15.832 14.2676C16.2656 13.5527 16.4824 12.7852 16.4824 11.9648C16.4824 10.9219 16.1631 9.99609 15.5244 9.1875C14.8857 8.37891 14.0742 7.8457 13.0898 7.58789V3C14.5664 3.1875 15.9053 3.69727 17.1064 4.5293C18.3076 5.36133 19.2568 6.43066 19.9541 7.7373C20.6514 9.04395 21 10.4531 21 11.9648C21 14.0273 20.3613 15.8789 19.084 17.5195ZM7.60547 10.8223H3C3.25781 8.7832 4.11621 7.03418 5.5752 5.5752C7.03418 4.11621 8.7832 3.25781 10.8223 3V7.58789C10.0371 7.79883 9.35449 8.19434 8.77441 8.77441C8.19434 9.35449 7.80469 10.0371 7.60547 10.8223ZM7.58789 13.0898C7.8457 14.0742 8.37891 14.8857 9.1875 15.5244C9.99609 16.1631 10.9219 16.4824 11.9648 16.4824C12.7852 16.4824 13.5527 16.2656 14.2676 15.832L17.5195 19.084C15.8789 20.3613 14.0273 21 11.9648 21C10.4531 21 9.04395 20.6514 7.7373 19.9541C6.43066 19.2568 5.36133 18.3076 4.5293 17.1064C3.69727 15.9053 3.1875 14.5664 3 13.0898H7.58789Z" fill="black"/>
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path d="M19.084 17.5195L15.832 14.2676C16.2656 13.5527 16.4824 12.7852 16.4824 11.9648C16.4824 10.9219 16.1631 9.99609 15.5244 9.1875C14.8857 8.37891 14.0742 7.8457 13.0898 7.58789V3C14.5664 3.1875 15.9053 3.69727 17.1064 4.5293C18.3076 5.36133 19.2568 6.43066 19.9541 7.7373C20.6514 9.04395 21 10.4531 21 11.9648C21 14.0273 20.3613 15.8789 19.084 17.5195ZM7.60547 10.8223H3C3.25781 8.7832 4.11621 7.03418 5.5752 5.5752C7.03418 4.11621 8.7832 3.25781 10.8223 3V7.58789C10.0371 7.79883 9.35449 8.19434 8.77441 8.77441C8.19434 9.35449 7.80469 10.0371 7.60547 10.8223ZM7.58789 13.0898C7.8457 14.0742 8.37891 14.8857 9.1875 15.5244C9.99609 16.1631 10.9219 16.4824 11.9648 16.4824C12.7852 16.4824 13.5527 16.2656 14.2676 15.832L17.5195 19.084C15.8789 20.3613 14.0273 21 11.9648 21C10.4531 21 9.04395 20.6514 7.7373 19.9541C6.43066 19.2568 5.36133 18.3076 4.5293 17.1064C3.69727 15.9053 3.1875 14.5664 3 13.0898H7.58789Z" fill="black"/>
+            </svg>
+
+        </div>
+
+   </div>
+
+
+  <h6> section subtitle with action </h6>
+  <div class='section__subtitle '>
+        <h3 class='title__text'>  Section Subtitle  </h3>
+
+        <div class="title__action"> 
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path d="M19.084 17.5195L15.832 14.2676C16.2656 13.5527 16.4824 12.7852 16.4824 11.9648C16.4824 10.9219 16.1631 9.99609 15.5244 9.1875C14.8857 8.37891 14.0742 7.8457 13.0898 7.58789V3C14.5664 3.1875 15.9053 3.69727 17.1064 4.5293C18.3076 5.36133 19.2568 6.43066 19.9541 7.7373C20.6514 9.04395 21 10.4531 21 11.9648C21 14.0273 20.3613 15.8789 19.084 17.5195ZM7.60547 10.8223H3C3.25781 8.7832 4.11621 7.03418 5.5752 5.5752C7.03418 4.11621 8.7832 3.25781 10.8223 3V7.58789C10.0371 7.79883 9.35449 8.19434 8.77441 8.77441C8.19434 9.35449 7.80469 10.0371 7.60547 10.8223ZM7.58789 13.0898C7.8457 14.0742 8.37891 14.8857 9.1875 15.5244C9.99609 16.1631 10.9219 16.4824 11.9648 16.4824C12.7852 16.4824 13.5527 16.2656 14.2676 15.832L17.5195 19.084C15.8789 20.3613 14.0273 21 11.9648 21C10.4531 21 9.04395 20.6514 7.7373 19.9541C6.43066 19.2568 5.36133 18.3076 4.5293 17.1064C3.69727 15.9053 3.1875 14.5664 3 13.0898H7.58789Z" fill="black"/>
+            </svg>
+        </div>
+
+   </div>
+
+   <div class='section__subtitle_level2 '>
+        <h3 class='title__text'>  Section Subtitle level 2  </h3>
+      </div>
+</div> -->
+<p><code>`</code></p>
+</div>
+</div>
+
+				</div>
+				<div id="category-utils" class="theme-content-category">
+						<div id="utilitys" class="i-library theme-content-element">
+	<h1 class="display-4 theme-content-element-title">Utilitys</h1>
+	<span class="theme-content-element-source">
+		<span class="theme-content-element-source-label">Source:</span>
+		<span class="theme-content-element-source-path">docs/utils.md</span>
+	</span>
+	<div class="theme-content-element-description"><div id="spacing" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#spacing" class="icon-link i-section__link -heading"></a>Spacing</h2></div><p>margim with </p>
+<ul>
+<li><code>.mt-1 (.mt-sm-1)</code> - margin top - 1 a 12</li>
+<li><code>.ml-1</code> - margin left -  1 a 12</li>
+<li><code>.mr-1</code> - margin right - 1 a 12</li>
+<li><code>.mb-1</code> - margin bottom - 1 a 12</li>
+<li><code>.mx-1</code> - margin left and right - 1 a 12</li>
+<li><code>.my-1</code> - margin top and bottom - 1 a 12</li>
+<li><code>.mx-auto</code> - margin top and bottom - 1 a 12</li>
+</ul>
+<p>padding with </p>
+<ul>
+<li><code>.pt-1 (.pt-sm-1)</code> - margin top - 1 a 12</li>
+<li><code>.pl-1</code> - margin left -  1 a 12</li>
+<li><code>.pr-1</code> - margin right - 1 a 12</li>
+<li><code>.pb-1</code> - margin bottom - 1 a 12</li>
+<li><code>.px-1</code> - margin left and right - 1 a 12</li>
+<li><code>.py-1</code> - margin top and bottom - 1 a 12</li>
+</ul>
+<div id="sizer" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#sizer" class="icon-link i-section__link -heading"></a>Sizer</h2></div><ul>
+<li><code>w-num (.w-sm-num)</code>  width in percent 0-100</li>
+<li><code>h-num</code>  height in percent 0-100</li>
+<li><code>wv-num</code>  width in viewport  0-100</li>
+<li><code>hv-num</code>  height in viewport 0-100</li>
+<li><code>wp-num</code>  width in scales pixels 0-24</li>
+<li><code>hp-num</code>  height in scales pixels 0-24</li>
+</ul>
+<div id="fonts" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#fonts" class="icon-link i-section__link -heading"></a>Fonts</h2></div><ul>
+<li><code>.fs-xs (.fs-xs-xs)</code></li>
+<li><code>.fs-sm</code></li>
+<li><code>.fs-md</code></li>
+<li><code>.fs-lg</code></li>
+<li><code>.fs-xlg</code></li>
+<li><code>.fs-xxlg</code></li>
+<li><code>.fs-xxxlg</code></li>
+<li><p><code>.fs-xxxxlg</code></p>
+</li>
+<li><p><code>.fs-1 (fs-sm-1)</code> fontsize 1 a 12 in scalar pixel</p>
+</li>
+<li><code>.fs--1 (fs-sm--1)</code> fontsize -1 a -12 scalar pixel</li>
+<li><code>.fs-1rem</code> fontsize 1 a 12 in rem</li>
+<li><code>.fs--1em</code> fontsize 1 a 12 in em</li>
+</ul>
+<p><strong>line-height</strong></p>
+<ul>
+<li><code>.lh-08 (lh-sm-08)</code> - line height of 06 - 14 ( significa 0.6 1.4)</li>
+</ul>
+<p><strong>text align</strong></p>
+<ul>
+<li><code>.tr (.tr-sm)</code> text-right</li>
+<li><code>.tl</code> text-left</li>
+<li><code>.tc</code> text-center</li>
+</ul>
+<div id="opacity" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#opacity" class="icon-link i-section__link -heading"></a>Opacity</h2></div><ul>
+<li><code>.o-10 (o-sm-50)</code>  opacity from 0 to 100 (step of 10)</li>
+</ul>
+<div id="display" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#display" class="icon-link i-section__link -heading"></a>Display</h2></div><ul>
+<li><code>.d-none (d-sm-block)</code>  </li>
+<li><code>.d-block</code></li>
+<li><code>.d-inline-block</code></li>
+<li><code>.d-flex</code></li>
+<li><code>.d-inline-flex</code></li>
+<li><code>.d-grid</code></li>
+<li><code>.d-inline-grid</code></li>
+</ul>
+<div id="hidden" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#hidden" class="icon-link i-section__link -heading"></a>Hidden</h2></div><ul>
+<li><code>.hidden</code>  </li>
+<li><code>.hidden-xs</code> </li>
+<li><code>...</code></li>
+</ul>
+<div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="utilitys-hideexample.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="utilitys-hideexample.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="    &lt;div class=&#39;container-fluid&#39;&gt;
+       &lt;div&gt; small: &lt;span class=&#39;hidden-xs&#39;&gt; showing &lt;/span&gt; &lt;span class=&#39;hidden-sm&#39;&gt; hidden &lt;/span&gt; 
+       &lt;/div&gt;
+        &lt;div class=&#39;show hidden-md&#39;&gt; hidden-md &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+        &lt;div &gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div &gt; 8 &lt;/div&gt;
+
+
+    &lt;/div&gt;">Copy</button>
+		<pre class="mb-0"><code class="lang-">    &lt;div class=&#39;container-fluid&#39;&gt;
+       &lt;div&gt; small: &lt;span class=&#39;hidden-xs&#39;&gt; showing &lt;/span&gt; &lt;span class=&#39;hidden-sm&#39;&gt; hidden &lt;/span&gt; 
+       &lt;/div&gt;
+        &lt;div class=&#39;show hidden-md&#39;&gt; hidden-md &lt;/div&gt;
+        &lt;div&gt; 3 &lt;/div&gt;
+        &lt;div&gt; 4 &lt;/div&gt;
+        &lt;div&gt; 5 &lt;/div&gt;
+        &lt;div &gt; 6 &lt;/div&gt;
+        &lt;div&gt; 7 &lt;/div&gt;
+        &lt;div &gt; 8 &lt;/div&gt;
+
+
+    &lt;/div&gt;</code></pre>
+	</div>
+</div>
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> css</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="    h5{
+        margin-top:5em;
+    }
+    .grid &gt; div{
+        background: gray;
+        padding:20px;
+    }">Copy</button>
+		<pre class="mb-0"><code class="lang-">    h5{
+        margin-top:5em;
+    }
+    .grid &gt; div{
+        background: gray;
+        padding:20px;
+    }</code></pre>
+	</div>
+</div><div id="show" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#show" class="icon-link i-section__link -heading"></a>show</h2></div><ul>
+<li><code>.show</code>  </li>
+<li><code>.show-xs</code>  </li>
+</ul>
+<div id="colors" class="i-pad-top-5 i-section"><h2 class="i-pad-top-3 i-position-container"><a href="#colors" class="icon-link i-section__link -heading"></a>Colors</h2></div><ul>
+<li><code>.black</code> - font colors</li>
+<li><code>.white</code></li>
+<li><code>.green</code></li>
+<li><code>.gray</code></li>
+<li><p><code>.yellow</code></p>
+</li>
+<li><p><code>.bg-black</code> - background colors</p>
+</li>
+<li><code>.bg-white</code></li>
+<li><code>.bg-green</code></li>
+<li><code>.bg-gray</code></li>
+<li><code>.bg-yellow</code></li>
+</ul>
+</div>
+</div>
+
+				</div>
+		</div>
+		<div
+			class="i-page__sidebar theme-sidebar"
+			style="background: #f9fafc;color: #8492a6;"
+		>
+			<h1 class="i-sidebar-title h4 mt-4 theme-sidebar-header">
+				<span class="theme-sidebar-header-title">Guia de Estilo</span>
+			</h1>
+			
+			<div class="relative mt-3 mb-2 px-0 theme-sidebar-search">
+				<div class="i-search-input">
+					<input id="search-filter" name="filter" type="search" placeholder="Search" class="form-control i-sidebar-item-filter">
+					<label for="search-filter" class="search-input-icon icon-search"></label>
+					<button type="button" class="i-search-input-reset" aria-label="Clear">
+						<i class="icon-cross"></i>
+					</button>
+				</div>
+			</div>
+			
+			<div class="theme-sidebar-categories">
+					<div class="i-sidebar-list-group theme-sidebar-category">
+			
+						<h5
+							class="pt-4 mb-1 theme-sidebar-category-title"
+							data-filter-value=" Grid  Typography "
+						>
+							<a href="#category-design" class="i-sidebar-list-item">
+								<b>Design</b>
+							</a>
+						</h5>
+			
+						<div>
+								<a
+									href="#grid"
+									class="i-sidebar-list-item theme-sidebar-element"
+									data-filter-value="Grid"
+								>
+									<span>Grid</span>
+								</a>
+								<a
+									href="#typography"
+									class="i-sidebar-list-item theme-sidebar-element"
+									data-filter-value="Typography"
+								>
+									<span>Typography</span>
+								</a>
+						</div>
+			
+					</div>
+					<div class="i-sidebar-list-group theme-sidebar-category">
+			
+						<h5
+							class="pt-4 mb-1 theme-sidebar-category-title"
+							data-filter-value=" Utilitys "
+						>
+							<a href="#category-utils" class="i-sidebar-list-item">
+								<b>Utils</b>
+							</a>
+						</h5>
+			
+						<div>
+								<a
+									href="#utilitys"
+									class="i-sidebar-list-item theme-sidebar-element"
+									data-filter-value="Utilitys"
+								>
+									<span>Utilitys</span>
+								</a>
+						</div>
+			
+					</div>
+			</div>
+			
+			<div class="i-sidebar-filter-no-results i-muted i-pad-horiz-2 theme-sidebar-search-no-results">
+				No matches.
+			</div>
+			
+			<div class="row no-gutters mt-auto py-4 theme-sidebar-footer">
+				<span class="col">
+					Generated by <a href="https://github.com/nextbigsoundinc/stylemark">Stylemark</a>
+				</span>
+			</div>
+		</div>
+
+		<script src="_stylemark/js/vendor/jquery-3.2.1.slim.min.js"></script>
+		<script src="_stylemark/js/vendor/popper.min.js"></script>
+		<script src="_stylemark/js/vendor/tether.min.js"></script>
+		<script src="_stylemark/js/vendor/bootstrap.min.js"></script>
+		<script src="_stylemark/js/vendor/iframeResizer.min.js"></script>
+		<script src="_stylemark/js/vendor/lazyframe.min.js"></script>
+		<script src="_stylemark/js/vendor/highlight.min.js"></script>
+		<script src="_stylemark/js/vendor/clipboard.min.js"></script>
+		<script src="_stylemark/js/vendor/in-view.min.js"></script>
+		<script src="_stylemark/js/app.js"></script>
+
+	</body>
+</html>
