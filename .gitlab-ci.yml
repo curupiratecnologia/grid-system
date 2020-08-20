@@ -7,7 +7,7 @@ pages:
   stage: deploy
   script:
   - npm install
-  - npm run build-doc
+  - npm run build
   - rm -rf public
   - mv docs public
   artifacts:
