@@ -1,0 +1,103 @@
+height-ratio = 4px
+hratio = 4px
+font-base = 14px
+
+color-blue = #314559
+color-green = #5A9591
+color-gray = #575555
+color-gray-light = #797979
+color-orange = #E5A253
+color-yellow = #E8F595
+color-pink = #F1A1A1
+color-dark-gray = #446671
+
+color-main = color-green
+color-secundary = color-blue
+color-secundary = color-blue
+
+font-main =  'Proxima Nova Alt Rg'
+font-secundary = 'Gilroy'
+
+
+
+
+:root{
+  --hr: height-ratio 
+  --height-ratio: height-ratio 
+  --font-text: font-main 
+  --font-number: font-secundary  
+
+  --color-main: color-main
+  --color-secundary: color-secundary 
+  --color-link: color-yellow
+  
+
+  --color-theme-background: color-green
+  --color-theme-title: white
+  --color-theme-section-title: color-secundary
+  --color-theme-section-subtitle: black
+  --color-theme-text: white
+  
+  --fs-xxs: 0.54rem;
+  --fs-xs: 0.67rem;
+  --fs-sm:  0.75rem;
+  --fs-md: 1rem
+  --fs-lg:  1.333rem; 
+  --fs-xlg: 1.777rem;
+  --fs-xxlg: 2.369rem;
+  --fs-xxxlg:  3.157rem;
+  --fs-xxxxlg: 4.209rem;
+
+
+
+
+}
+
+.dark-theme{
+      --color-theme-background: #59928E
+}
+
+.light-theme{
+      --color-theme-background: #F2F2F2  
+}
+
+
+
+
+media_queries = {
+  xs  : "only screen and (max-width: 576px)",
+  sm  : "only screen and (min-width: 576px) and (max-width: 768px)",
+  md : "only screen and (min-width: 768px) and (max-width: 992px), only print",
+  lg : "only screen and (min-width: 992px) and (max-width: 1440px), only print",
+  xlg : "only screen and (min-width: 1440px), only print",
+  print : "only print",
+}
+
+for_device(breakpoints)
+  conditions = ()
+  for breakpoint in breakpoints
+    push(conditions, media_queries[breakpoint])
+  conditions = join(", ", conditions)
+  @media conditions
+    {block}
+
+media_queries_min = {
+  xs  : "only screen and (max-width: 576px)",
+  sm  : "only screen and (min-width: 576px)",
+  md : "only screen and (min-width: 768px), only print",
+  lg : "only screen and (min-width: 992px), only print",
+  xlg : "only screen and (min-width: 1440px), only print",
+  print : "only print",
+}
+
+for_device_min(breakpoints)
+  if(breakpoints)
+    conditions = ()
+    for breakpoint in breakpoints
+      push(conditions, media_queries_min[breakpoint])
+    conditions = join(", ", conditions)
+    @media conditions
+     {block}
+  else
+   {block}
+

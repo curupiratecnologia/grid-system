@@ -87,12 +87,16 @@ gulp.task('watch', function() {
 
 });
 
+gulp.task('copy-stylus', function() {
+  return gulp.src('src/css/*.styl')
+    .pipe(gulp.dest('./dist'));
+});
 
 
 
 
 gulp.task("default", gulp.series("stylus","stylemark","browser","watch") );
-gulp.task("build", gulp.series("stylusFinal","stylemark") );
+gulp.task("build", gulp.series("stylusFinal","stylemark","copy-stylus") );
 
 
 

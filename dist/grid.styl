@@ -1,0 +1,336 @@
+
+// CONTAINERS
+
+.container {
+	margin-left: auto
+	margin-right: auto
+   
+    +for_device(xs){
+        width: 540px;
+    }
+    +for_device(sm){
+       width: 720px;
+    }
+    +for_device(md){
+       width: 960px;
+    }
+    +for_device(lg){
+       width: 1140px;
+    }
+    +for_device(xlg){
+       width: 1340px;
+    }
+    +for_device(print){
+       width: 1340px;
+    }
+}
+.container-fluid {
+    max-width: 100%;
+}
+
+// GRID - Make sure it is a grid element
+.grid{
+   display: grid; 
+}
+
+
+
+
+for bkp in "" "xs" "sm" "md" "lg" "xlg" "print"{
+ 
+ +for_device_min(lookup('bkp')){ 
+   // define 24 grids
+   for i in (1..24){     
+        prefix = ""
+        if(bkp != ""){
+            prefix = "-"+bkp
+        }
+
+        .grid-auto{prefix}-{i*10} {
+             grid-template-columns: repeat(auto-fill, minmax(i*10px, 1fr));
+        }
+        .grid-auto{prefix}-{i*100} {
+             grid-template-columns: repeat(auto-fill, minmax(i*100px, 1fr));
+        }
+
+        //grid itens coluns span, em todas suas possibilidadas,
+        // respeitando o tanto de colunas que o grid container permite
+        for ii in (1..i){    
+            spanvar = span +" "+ ii
+           
+            if(prefix){
+              //versao da col sem prefix
+              .grid-{i} .col{prefix}-{ii}{
+                grid-column: spanvar;
+              }
+              .grid{prefix}-{i} .col{prefix}-{ii}{
+                grid-column: spanvar;
+              }
+              .grid{prefix}-{i} .col-{ii}{
+                grid-column: spanvar;
+              }
+            }else{
+             .grid-{i} .col-{ii}{
+                grid-column: spanvar;
+             }
+            }
+        }
+       
+        //grid itens rows span
+        .grid .row{prefix}-{i}{
+            grid-row: spanvar;
+        }
+        
+        .grid{prefix}-{i} {
+            display: grid;
+            grid-template-columns: repeat(i, minmax(0, 1fr)); 
+            grid-gap: (3*height-ratio);
+        }
+         // TODO - verificar se disponibilizo uma versao so com 1fr, que permite que uma coluna se expanda
+        .grid{prefix}-{i}-expandable {
+            display: grid;
+            grid-template-columns: repeat(i, 1fr); 
+            grid-gap: (3*height-ratio);
+        }
+
+        
+    }
+    .grid{
+        for i in (0..12){
+            // grid gap
+            &.gap{prefix}-{i}{
+                grid-gap: (i*height-ratio) 
+            }
+            &.col-gap{prefix}-{i}{
+                column-gap: (i*height-ratio)   
+            }
+            &.row-gap{prefix}-{i}{
+                row-gap: (i*height-ratio)  
+            }
+        }
+        &.j{prefix}-start{
+            justify-items: start;
+        }
+        &.j{prefix}-end{
+            justify-items: end;
+        }
+        &.j{prefix}-center{
+            justify-items: center;
+        }
+        &.j{prefix}-stretch{
+            justify-items: stretch;
+        }
+        &.a{prefix}-start{
+            align-items: start;
+        }
+        &.a{prefix}-end{
+            align-items: end;
+        }
+        &.a{prefix}-center{
+            align-items: center;
+        }
+        &.a{prefix}-stretch{
+            align-items: stretch;
+        }
+        
+        //grid items justify
+        .j{prefix}-start{
+            justify-self: start;
+        }
+        .j{prefix}-end{
+            justify-self: end;
+        }
+        .j{prefix}-center{
+            justify-self: center;
+        }
+        .j{prefix}-stretch{
+            justify-self: stretch;
+        }
+        .a{prefix}-start{
+            align-self: start;
+        }
+        .a{prefix}-end{
+            align-self: end;
+        }
+        .a{prefix}-center{
+            align-self: center;
+        }
+        .a{prefix}-stretch{
+            align-self: stretch;
+        }
+
+    }
+
+ }
+}
+
+
+
+// FLEX / ROWS
+for bkp in "" "xs" "sm" "md" "lg" "xlg" "print"{
+ 
+ +for_device_min(lookup('bkp')){ 
+        prefix = ""
+        if(bkp != ""){
+            prefix = "-"+bkp
+        }
+
+        .in-rows{prefix}, 
+        .in-cols{prefix} {
+            display: flex;
+            
+            &.inline{prefix}{
+                display: flex-flex;
+            }
+            &.nowrap{prefix}{
+                flex-wrap: nowrap
+            }
+            &.wrap{prefix}{
+                flex-wrap: wrap
+            }
+
+
+            &.j{prefix}-start{
+                justify-content: flex-start;
+            }
+            &.j{prefix}-end{
+                justify-content: flex-end;
+            }
+            &.j{prefix}-center{
+                justify-content: center;
+            }
+            &.j{prefix}-space-between{
+                justify-content: stretch;
+            }
+            &.j{prefix}-space-around{
+                justify-content: space-around;
+            }
+            &.j{prefix}-space-evenly{
+                justify-content: space-evenly;
+            }
+            &.a{prefix}-start{
+                align-items: start;
+            }
+            &.a{prefix}-end{
+                align-items: end;
+            }
+            &.a{prefix}-center{
+                align-items: center;
+            }
+            &.a{prefix}-stretch{
+                align-items: stretch;
+            }
+            &.a{prefix}-baseline{
+                align-items: baseline;
+            }
+            &.ac{prefix}-start{
+                align-items: start;
+            }
+            &.ac{prefix}-end{
+                align-items: end;
+            }
+            &.ac{prefix}-center{
+                align-items: center;
+            }
+            &.ac{prefix}-stretch{
+                align-items: stretch;
+            }
+            &.ac{prefix}-baseline{
+                align-items: baseline;
+            }
+
+            //itens
+            & > *{
+
+                for i in(-24..24){
+                    &.order{prefix}-{i}{
+                        order: i;
+                    }
+                }
+
+                for i in(0..5){
+                    &.grow{prefix}-{i}{
+                        flex-grow: i;
+                    }
+                    &.shrink{prefix}-{i}{
+                        flex-shrink: i;
+                    }
+                }
+
+                for i in(0..10){
+                    &.w{prefix}-{i}{
+                        flex-basis: (i*10%);
+                    }
+                    &.h{prefix}-{i}{
+                        flex-basis: (i*10%);
+                    }
+                }
+                &.a{prefix}-start{
+                    align-self: flex-start;
+                }
+                &.a{prefix}-end{
+                    align-self: flex-end;
+                }
+                &.a{prefix}-center{
+                    align-self: center;
+                }
+                &.a{prefix}-stretch{
+                    align-self: stretch;
+                }
+                &.a{prefix}-baseline{
+                    align-self: baseline;
+                }
+            }
+        }
+        
+
+
+        .in-rows{prefix} {
+            flex-direction: column
+            &.reverse{
+                flex-direction: column-reverse;
+            }
+
+            & > *{
+                margin-bottom: height-ratio
+            }
+
+            for i in (0..12){
+                &.gap{prefix}-{i} > *{
+                    margin-bottom: (i*height-ratio)
+                }   
+            } 
+            
+            & > *:last-child{
+                margin-bottom: 0
+            }  
+        }
+
+        .in-cols{prefix} {
+            display: flex;
+            flex-direction: row
+            &.reverse{
+                flex-direction: row-reverse;
+            }
+
+            & > *{
+                margin-right: (height-ratio)
+            }
+            for i in (0..12){
+                &.gap{prefix}-{i} > *{
+                    margin-right: (i*height-ratio)
+                }   
+            }
+
+            & > *:last-child{
+                margin-right: 0
+            } 
+
+        }
+   
+   }
+}
+
+
+
+
