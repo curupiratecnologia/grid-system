@@ -18,7 +18,6 @@ for bkp in "" "xs" "sm" "md" "lg" "xlg" "print"{
         }
 
         for i in (0..12){
-            
             // Margim
             .mt{prefix}-{i}{
                 margin-top: (i*i*height-ratio)
@@ -65,7 +64,7 @@ for bkp in "" "xs" "sm" "md" "lg" "xlg" "print"{
         }
 
 
-                // Widht and Height
+        // Widht and Height
         for i in (0..10){
             .w-{i}0{
                 width: (i*10%)
@@ -92,11 +91,25 @@ for bkp in "" "xs" "sm" "md" "lg" "xlg" "print"{
 
 
         // OPACITY
-
         for i in (0..10){
             .o{prefix}-{i}0{
                 opacity: (i/10)
             }   
+        }
+        // Display
+        for i in "inline" "none" "block" "flex" "inline-flex" "grid" "inline-grid"{
+            .d{prefix}-{i}{
+                display: unquote(i);
+            }   
+        }
+
+
+        //hidden
+        .hidden{prefix}{
+           display:none;
+        }
+        .show{prefix}{
+           display:initial;
         }
 
 

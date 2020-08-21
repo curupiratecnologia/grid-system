@@ -295,16 +295,16 @@ for bkp in "" "xs" "sm" "md" "lg" "xlg" "print"{
                 margin-bottom: height-ratio
             }
 
-            for i in (0..12){
-                &.gap{prefix}-{i} > *{
-                    margin-bottom: (i*height-ratio)
-                }   
-            } 
-            
             & > *:last-child{
                 margin-bottom: 0
             }  
         }
+
+        for i in (0..12){ 
+            [class*='in-rows'].gap{prefix}-{i} > *{
+                margin-bottom: (i*height-ratio)
+            }   
+        } 
 
         .in-cols{prefix} {
             display: flex;
@@ -316,17 +316,18 @@ for bkp in "" "xs" "sm" "md" "lg" "xlg" "print"{
             & > *{
                 margin-right: (height-ratio)
             }
-            for i in (0..12){
-                &.gap{prefix}-{i} > *{
-                    margin-right: (i*height-ratio)
-                }   
-            }
 
             & > *:last-child{
                 margin-right: 0
             } 
 
         }
+
+         for i in (0..12){ 
+            [class*='in-cols'].gap{prefix}-{i} > *{
+                   margin-right: (i*height-ratio)
+            }   
+        } 
    
    }
 }

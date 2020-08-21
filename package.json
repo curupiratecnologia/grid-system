@@ -21,10 +21,12 @@
     "url": "https://github.com/curupiratecnologia/grid-system.git"
   },
   "scripts": {
-    "dev": "gulp",
-    "serve": "gulp",
-    "build-doc": "stylemark -i src -o docs -c src/.stylemark.yml",
-    "build": "gulp build"
+    "dev": "npm run storybook",
+    "serve": "npm run storybook",
+    "build-doc": "build-storybook",
+    "build": "gulp build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -o docs"
   },
   "dependencies": {
     "core-js": "^3.6.4",
@@ -35,6 +37,12 @@
     "stylemark": "^3.1.7"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@storybook/addon-actions": "^6.0.16",
+    "@storybook/addon-essentials": "^6.0.16",
+    "@storybook/addon-links": "^6.0.16",
+    "@storybook/html": "^6.0.16",
+    "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.7",
     "colorette": "^1.2.0",
     "gulp": "^4.0.2",
@@ -44,7 +52,9 @@
     "gulp-notify": "^2.2.0",
     "gulp-run": "^1.7.1",
     "gulp-stylus": "^2.7.0",
-    "stylus": "^0.54.7",
-    "stylus-loader": "^3.0.2"
+    "react-is": "^16.13.1",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^3.0.2",
+    "vue-cli-plugin-storybook": "~1.3.0"
   }
 }
