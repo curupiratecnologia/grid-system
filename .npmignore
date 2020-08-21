@@ -2,5 +2,6 @@ docs/
 storybook-static
 .storybook
 public
+src/stories
 
 
