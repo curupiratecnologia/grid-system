@@ -7,4 +7,4 @@ A pratical and responsive grid system and utilits.
 ## Using
 ` import from '@curupira/grid-system/dist/main.css'`
 
-See [Documentation](https://curutecnologia.gitlab.io/grid-system).
+See [Documentation](https://curupiratecnologia.github.io/grid-system/).
