@@ -1,6 +1,6 @@
 {
   "name": "@curupira/grid-system",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "description": "a grid and others css utilit framework",
   "homepage": "https://curupiratecnologia.github.io/grid-system/",
@@ -24,7 +24,7 @@
     "dev": "npm run storybook",
     "serve": "npm run storybook",
     "build-doc": "build-storybook",
-    "build": "gulp build",
+    "build": "gulp build && build-storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs"
   },
