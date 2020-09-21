@@ -6,16 +6,17 @@
 	margin-right: auto
    
     +for_device(xs){
-        width: 540px;
+        width: calc(100% - 30px);
+        
     }
     +for_device(sm){
-       width: 720px;
+        width: calc(100% - 30px);
     }
     +for_device(md){
-       width: 960px;
+        width: calc(100% - 60px);
     }
     +for_device(lg){
-       width: 1140px;
+       width: 992px;
     }
     +for_device(xlg){
        width: 1340px;
@@ -95,6 +96,14 @@ for bkp in "" "xs" "sm" "md" "lg" "xlg" "print"{
 
         
     }
+
+    for i in(-24..24){
+        .order{prefix}-{i}{
+            order: i;
+        }
+    }
+
+
     .grid{
         for i in (0..12){
             // grid gap
@@ -209,10 +218,10 @@ for bkp in "" "xs" "sm" "md" "lg" "xlg" "print"{
                 justify-content: space-evenly;
             }
             &.a{prefix}-start{
-                align-items: start;
+                align-items: flex-start;
             }
             &.a{prefix}-end{
-                align-items: end;
+                align-items: flex-end;
             }
             &.a{prefix}-center{
                 align-items: center;
@@ -242,12 +251,7 @@ for bkp in "" "xs" "sm" "md" "lg" "xlg" "print"{
             //itens
             & > *{
 
-                for i in(-24..24){
-                    &.order{prefix}-{i}{
-                        order: i;
-                    }
-                }
-
+              
                 for i in(0..5){
                     &.grow{prefix}-{i}{
                         flex-grow: i;
